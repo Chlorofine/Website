@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SebFrames - Feed</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<script src="script.js"></script>
+    <div id="feed-view">
+        <header class="main-header">
+            <div class="header-content">
+                <h1 class="logo"><i class="fas fa-camera-retro"></i> SebFrames</h1>
+                <input type="text" placeholder="Search..." class="search-bar">
+                </div>
+        </header>
+
+        <div class="main-layout">
+            
+            <aside class="sidebar-left">
+                <div class="profile-card">
+                    <div class="profile-header">
+                         <div class="profile-pic-placeholder">P</div>
+                        <div>
+                            <p class="profile-name">CurrentUser</p>
+                            <p class="profile-handle">@currentuser</p>
+                        </div>
+                    </div>
+                    <div class="profile-stats">
+                        <div><strong>12</strong><br>Posts</div>
+                        <div><strong>150</strong><br>Followers</div>
+                        <div><strong>85</strong><br>Following</div>
+                    </div>
+                </div>
+
+                <nav class="side-nav-menu profile-card">
+                    <a href="#" class="nav-item active"><i class="fas fa-home"></i> Home</a>
+                    <a href="#" class="nav-item"><i class="fas fa-compass"></i> Explore</a>
+                    <a href="#" class="nav-item"><i class="fas fa-bell"></i> Notification</a>
+                    <a href="#" class="nav-item"><i class="fas fa-bookmark"></i> Bookmarks</a>
+                    <a href="#" class="nav-item"><i class="fas fa-user"></i> Profile</a>
+                    <a href="index.html" class="nav-item logout-item"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                </nav>
+                
+                <button class="primary-btn create-post-btn">Create Post</button>
+            </aside>
+            
+            <main class="feed">
+                <div class="post-composer-card post">
+                    <div class="composer-header">
+                         <div class="profile-pic-placeholder icon-small">P</div>
+                        <input type="text" placeholder="What's on your mind, CurrentUser?" class="composer-input">
+                    </div>
+                    <div class="composer-actions">
+                        <button class="icon-btn"><i class="fas fa-image"></i> Photo/Video</button>
+                         <button class="icon-btn"><i class="fas fa-smile"></i> Feeling/Activity</button>
+                        <button class="primary-btn composer-btn">Post</button>
+                    </div>
+                </div>
+                
+                <article class="post">
+                    <div class="post-header">
+                        <span class="user-avatar">P</span>
+                        <div>
+                             <a href="#" class="username">Photographer_X</a>
+                             <p class="post-time">2 hours ago</p>
+                        </div>
+                        <button class="more-options-btn"><i class="fas fa-ellipsis-h"></i></button>
+                    </div>
+                    <div class="post-media">
+                        <div class="media-placeholder">[Image/Video Content Here]</div>
+                    </div>
+                    <div class="post-actions">
+                        <button class="action-icon active-like"><i class="fas fa-heart"></i></button>
+                        <button class="action-icon"><i class="fas fa-comment"></i></button>
+                        <button class="action-icon"><i class="fas fa-share"></i></button>
+                        <span class="like-count">15 likes</span>
+                    </div>
+                    <p class="post-caption"><strong>Photographer_X:</strong> Absolutely stunning sunset shot from the mountain climb! #photography #nature</p>
+                    <div class="comments-section">
+                        <p class="comment-item"><strong>UserA:</strong> Amazing light!</p>
+                        <p class="comment-item"><strong>UserB:</strong> Wish I was there.</p>
+                        <input type="text" placeholder="Add a comment..." class="comment-input">
+                    </div>
+                </article>
+
+                <article class="post">
+                    <div class="post-header">
+                        <span class="user-avatar">V</span>
+                         <div>
+                             <a href="#" class="username">VideoArt_Pro</a>
+                             <p class="post-time">5 hours ago</p>
+                        </div>
+                         <button class="more-options-btn"><i class="fas fa-ellipsis-h"></i></button>
+                    </div>
+                    <div class="post-media">
+                        <div class="media-placeholder">[Another Piece of Media]</div>
+                    </div>
+                    <div class="post-actions">
+                        <button class="action-icon"><i class="fas fa-heart"></i></button>
+                        <button class="action-icon"><i class="fas fa-comment"></i></button>
+                        <button class="action-icon"><i class="fas fa-share"></i></button>
+                        <span class="like-count">42 likes</span>
+                    </div>
+                    <p class="post-caption"><strong>VideoArt_Pro:</strong> New time-lapse video of the city lights is up! #videoart #city</p>
+                    <div class="comments-section">
+                        <p class="comment-item"><strong>UserC:</strong> Great transitions!</p>
+                        <input type="text" placeholder="Add a comment..." class="comment-input">
+                    </div>
+                </article>
+            </main>
+
+            <aside class="sidebar-right">
+                
+                <div class="photo-of-week-card profile-card">
+                    <h3><i class="fas fa-trophy"></i> Photo of the Week</h3>
+                    <div class="week-photo-placeholder">
+                        [Winner's Photo]
+                    </div>
+                    <p class="week-photo-credit">By <strong>Artist_1</strong></p>
+                </div>
+
+                <div class="suggestions-card profile-card">
+                    <h3>Suggested Users</h3>
+                    <ul>
+                        <li>
+                            <div class="suggestion-item">
+                                <div class="profile-pic-placeholder icon-small">A</div>
+                                <div class="suggestion-info">
+                                    <a href="#" class="username">Artist_1</a>
+                                    <p class="suggestion-meta">New to SebFrames</p>
+                                </div>
+                                 <button class="follow-btn">Follow</button>
+                            </div>
+                        </li>
+                         <li>
+                            <div class="suggestion-item">
+                                <div class="profile-pic-placeholder icon-small">C</div>
+                                <div class="suggestion-info">
+                                    <a href="#" class="username">Creator_2</a>
+                                    <p class="suggestion-meta">Followed by UserA</p>
+                                </div>
+                                 <button class="follow-btn">Follow</button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+<div id="feed-view">
+    <header class="main-header">
+            </header>
+
+    <div class="main-layout">
+        
+        <aside class="sidebar-left">
+                        <nav class="side-nav-menu profile-card">
+                <a href="#" class="nav-item active"><i class="fas fa-home"></i> Home</a>
+                <a href="#" class="nav-item"><i class="fas fa-compass"></i> Explore</a>
+                                <a href="#" class="nav-item" id="nav-notification"><i class="fas fa-bell"></i> Notification</a>
+                                <a href="#" class="nav-item" id="nav-bookmarks"><i class="fas fa-bookmark"></i> Bookmarks</a>
+                <a href="#" class="nav-item"><i class="fas fa-user"></i> Profile</a>
+                <a href="index.html" class="nav-item logout-item"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </nav>
+            
+            <button class="primary-btn create-post-btn">Create Post</button>
+        </aside>
+        
+            </div>
+
+    <div id="notification-popup" class="nav-popup hidden-popup">
+        <h3>Notifications</h3>
+        <p>No new activity.</p>
+        <p class="popup-time">Last checked: Now</p>
+    </div>
+
+    <div id="bookmarks-popup" class="nav-popup hidden-popup">
+        <h3>Bookmarks</h3>
+        <p>Your saved posts appear here.</p>
+        <p class="popup-time">0 posts saved.</p>
+    </div>
+</div>
+                 <div class="upload-area profile-card">
+                    <h3>Upload New Media</h3>
+                    <input type="file" id="media-upload">
+                    <input type="text" placeholder="Add a caption...">
+                    <button class="primary-btn upload-btn">Upload</button>
+                </div>
+            </aside>
+        </div>
+    </div>
+</body>
+</html>
