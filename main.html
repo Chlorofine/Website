@@ -4,18 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SebFrames - Feed</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght:100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<script src="script.js"></script>
     <div id="feed-view">
         <header class="main-header">
             <div class="header-content">
                 <h1 class="logo"><i class="fas fa-camera-retro"></i> SebFrames</h1>
                 <input type="text" placeholder="Search..." class="search-bar">
-                </div>
+            </div>
         </header>
 
         <div class="main-layout">
@@ -23,11 +22,11 @@
             <aside class="sidebar-left">
                 <div class="profile-card">
                     <div class="profile-header">
-                         <div class="profile-pic-placeholder">P</div>
-                        <div>
+                       <div class="profile-pic-placeholder">P</div>
+                       <div>
                             <p class="profile-name">CurrentUser</p>
                             <p class="profile-handle">@currentuser</p>
-                        </div>
+                       </div>
                     </div>
                     <div class="profile-stats">
                         <div><strong>12</strong><br>Posts</div>
@@ -39,24 +38,24 @@
                 <nav class="side-nav-menu profile-card">
                     <a href="#" class="nav-item active"><i class="fas fa-home"></i> Home</a>
                     <a href="#" class="nav-item"><i class="fas fa-compass"></i> Explore</a>
-                    <a href="#" class="nav-item"><i class="fas fa-bell"></i> Notification</a>
-                    <a href="#" class="nav-item"><i class="fas fa-bookmark"></i> Bookmarks</a>
+                    <a href="#" class="nav-item" id="nav-notification"><i class="fas fa-bell"></i> Notification</a>
+                    <a href="#" class="nav-item" id="nav-bookmarks"><i class="fas fa-bookmark"></i> Bookmarks</a>
                     <a href="#" class="nav-item"><i class="fas fa-user"></i> Profile</a>
                     <a href="index.html" class="nav-item logout-item"><i class="fas fa-sign-out-alt"></i> Logout</a>
                 </nav>
                 
-                <button class="primary-btn create-post-btn">Create Post</button>
+                <button class="primary-btn create-post-btn" id="create-post-sidebar-btn">Create Post</button>
             </aside>
             
             <main class="feed">
-                <div class="post-composer-card post">
+                <div class="post-composer-card post" id="post-composer-card">
                     <div class="composer-header">
-                         <div class="profile-pic-placeholder icon-small">P</div>
-                        <input type="text" placeholder="What's on your mind, CurrentUser?" class="composer-input">
+                       <div class="profile-pic-placeholder icon-small">P</div>
+                       <input type="text" placeholder="What's on your mind, CurrentUser?" class="composer-input">
                     </div>
                     <div class="composer-actions">
                         <button class="icon-btn"><i class="fas fa-image"></i> Photo/Video</button>
-                         <button class="icon-btn"><i class="fas fa-smile"></i> Feeling/Activity</button>
+                        <button class="icon-btn"><i class="fas fa-smile"></i> Feeling/Activity</button>
                         <button class="primary-btn composer-btn">Post</button>
                     </div>
                 </div>
@@ -90,7 +89,7 @@
                 <article class="post">
                     <div class="post-header">
                         <span class="user-avatar">V</span>
-                         <div>
+                        <div>
                              <a href="#" class="username">VideoArt_Pro</a>
                              <p class="post-time">5 hours ago</p>
                         </div>
@@ -133,7 +132,7 @@
                                     <a href="#" class="username">Artist_1</a>
                                     <p class="suggestion-meta">New to SebFrames</p>
                                 </div>
-                                 <button class="follow-btn">Follow</button>
+                                <button class="follow-btn">Follow</button>
                             </div>
                         </li>
                          <li>
@@ -143,44 +142,12 @@
                                     <a href="#" class="username">Creator_2</a>
                                     <p class="suggestion-meta">Followed by UserA</p>
                                 </div>
-                                 <button class="follow-btn">Follow</button>
+                                <button class="follow-btn">Follow</button>
                             </div>
                         </li>
                     </ul>
                 </div>
-<div id="feed-view">
-    <header class="main-header">
-            </header>
 
-    <div class="main-layout">
-        
-        <aside class="sidebar-left">
-                        <nav class="side-nav-menu profile-card">
-                <a href="#" class="nav-item active"><i class="fas fa-home"></i> Home</a>
-                <a href="#" class="nav-item"><i class="fas fa-compass"></i> Explore</a>
-                                <a href="#" class="nav-item" id="nav-notification"><i class="fas fa-bell"></i> Notification</a>
-                                <a href="#" class="nav-item" id="nav-bookmarks"><i class="fas fa-bookmark"></i> Bookmarks</a>
-                <a href="#" class="nav-item"><i class="fas fa-user"></i> Profile</a>
-                <a href="index.html" class="nav-item logout-item"><i class="fas fa-sign-out-alt"></i> Logout</a>
-            </nav>
-            
-            <button class="primary-btn create-post-btn">Create Post</button>
-        </aside>
-        
-            </div>
-
-    <div id="notification-popup" class="nav-popup hidden-popup">
-        <h3>Notifications</h3>
-        <p>No new activity.</p>
-        <p class="popup-time">Last checked: Now</p>
-    </div>
-
-    <div id="bookmarks-popup" class="nav-popup hidden-popup">
-        <h3>Bookmarks</h3>
-        <p>Your saved posts appear here.</p>
-        <p class="popup-time">0 posts saved.</p>
-    </div>
-</div>
                  <div class="upload-area profile-card">
                     <h3>Upload New Media</h3>
                     <input type="file" id="media-upload">
@@ -188,7 +155,21 @@
                     <button class="primary-btn upload-btn">Upload</button>
                 </div>
             </aside>
+             
+            <div id="notification-popup" class="nav-popup hidden-popup">
+                <h3>Notifications</h3>
+                <p>No new activity.</p>
+                <p class="popup-time">Last checked: Now</p>
+            </div>
+
+            <div id="bookmarks-popup" class="nav-popup hidden-popup">
+                <h3>Bookmarks</h3>
+                <p>Your saved posts appear here.</p>
+                <p class="popup-time">0 posts saved.</p>
+            </div>
+
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
